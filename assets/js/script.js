@@ -5,7 +5,36 @@ $(document).ready(function() {
         } else {
             $(".navbar").removeClass("sticky");
         }
+
+        if(this.scrollY > 500) {
+            $(".scroll-up-btn").addClass("show");
+        } else {
+            $(".scroll-up-btn").removeClass("show");
+        }
     });
+
+    // slide-up script
+
+    $(".scroll-up-btn").click(function() {
+        $("html").animate({scrollTop: 0});
+    });
+
+     // typing animation script
+
+     const typed = new Typed(".typing", {
+        strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+     });
+
+     const typed_two = new Typed(".typing-2", {
+        strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+     });
+
 
     // toogle menu/navbar script
 
@@ -15,7 +44,7 @@ $(document).ready(function() {
     });
 
     // owl carousel script
-    
+
     $(".carousel").owlCarousel({
         margin: 20,
         loop: true,
